@@ -1,9 +1,4 @@
 class Bike
-<<<<<<< HEAD
-  def working?
-    false
-  end
-=======
 
   def initialize
     @working = true
@@ -17,5 +12,4 @@ class Bike
     @working = false
   end
 
->>>>>>> day-4
 end

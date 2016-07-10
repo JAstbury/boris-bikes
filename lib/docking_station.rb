@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-class DockingStation
-  def release_bike
-    Bike.new
-  end
-=======
 require_relative 'bike'
 require_relative 'van'
 
@@ -46,5 +40,4 @@ class DockingStation
     bikes.empty?
   end
 
->>>>>>> day-4
 end
