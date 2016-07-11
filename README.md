@@ -1,10 +1,7 @@
 Boris Bikes Challenge
 =======
 
-The Task
------
-
-To write a program that models the Boris Bike system. The program will run all the Docking Stations, simulate all the Bikes, and emulate the entire infrastructure (vans, repair staff etc) required.
+The Makers Academy Week 1 task was to write a program that models the Boris Bikes system. The program runs all the Docking Stations, simulates all the Bikes, and emulates the entire infrastructure (vans, repair staff etc) required.
 
 How to Use
 -----
