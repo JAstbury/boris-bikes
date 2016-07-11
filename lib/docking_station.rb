@@ -1,11 +1,11 @@
 require_relative 'bike'
 require_relative 'van'
+require_relative 'garages'
 
 class DockingStation
   DEFAULT_CAPACITY = 20
   attr_reader :capacity
   attr_accessor :bikes
-  #attr_reader :brokenbikes
 
   def initialize(capacity = DEFAULT_CAPACITY)
     @bikes = []
@@ -14,7 +14,8 @@ class DockingStation
 
   def release_bike
     fail 'No bikes available' if empty?
-    fail 'All bikes are broken' unless bikes.last.working?
+    brkn = 'All bikes are broken'
+    fail brkn if bikes.count == bikes.count {|bike| bike.working? == false}
     bike = bikes.select{|bike| bike.working?}.pop
     bikes.delete(bike)
   end
@@ -22,13 +23,7 @@ class DockingStation
   def dock(bike)
     fail 'No spaces to dock bike' if full?
     bikes << bike
-    bike
   end
-
-  #def broken_bikes
-  #  brokenbikes = bikes.select {|bike| bike.working? == false }
-  #  brokenbikes.takes_broken_bikes
-#  end
 
   private
 
